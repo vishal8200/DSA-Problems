@@ -1,0 +1,97 @@
+1 QUESTION (LINEAR SEARCH)
+#include<bits/stdc++.h>
+using namespace std;
+void linearsearch(int n,int arr[],int key,int index)
+{
+    int flag=-1;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]==key)
+        {
+            flag=1;
+            index=i;
+            break;
+        }
+    }
+    if (flag==1)
+    {
+         cout<<"element found at position "<<index<<" ";
+    }
+    else {
+        cout<<"element not found";
+    }
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n]={20,25,35,30,50,48};
+    int key=30,index=-1;
+    linearsearch(n,arr,key,index);
+}
+==================================================================
+2 QUESTION (COUNT VALUE)
+#include<bits/stdc++.h>
+using namespace std;
+void linearsearch(int n,int arr[],int key)
+{
+    int count=0;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]==key)
+        {
+            count++;
+        }
+    }
+    cout<<count<<" ";
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n]={20,25,20,30,50,20};
+    int key=20;
+    linearsearch(n,arr,key);
+}
+====================================================
+3 question (minimum)
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n]={15,20,25,35,45,55};
+    int min=arr[0],index=-1;
+    for(int i=0;i<n;i++)
+    {
+        if(min>arr[i])
+        {
+             min=arr[i];
+             index=i;
+        }
+    }
+    cout<<"position"<<index<<"\n";
+        cout<<"min element is"<<min<<" ";
+}
+==========================================================
+4 question (maximum)
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n]={15,20,25,35,45,55};
+    int max=arr[0],index=-1;
+    for(int i=0;i<n;i++)
+    {
+        if(max<arr[i])
+        {
+             max=arr[i];
+             index=i;
+        }
+    }
+    cout<<"position"<<index<<"\n";
+        cout<<"max element is"<<max<<" ";
+}
